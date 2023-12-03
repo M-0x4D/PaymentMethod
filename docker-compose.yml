@@ -1,6 +1,17 @@
 version: "1.0"
 
 services:
+
+  kong:
+    image: kong
+    volumes:
+      - "volumeName:containerPath:ro"
+    environment:
+      - KONG_DATABASE=postgres
+        KONG_PG_HOST=database
+        KONG_PG_PASSWORD=kongpass
+        KONG_PASSWORD=test
+
   auth-service:
     ports:
       - "8080:80"

@@ -1,0 +1,9 @@
+_format_version: ""
+
+services:
+  - name: api-gateway
+    url: ""
+    routes:
+      - name: api-gateway
+        paths:
+          - /api
